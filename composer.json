@@ -1,0 +1,17 @@
+{
+    "name": "sutiv/getstarted_new_technologies",
+    "description": "TEst azure 204",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Sutiv\\GetstartedNewTechnologies\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "KALUMVUATI Duramana",
+            "email": "duramana.kalumvuati@laposte.net"
+        }
+    ],
+    "require": {}
+}
