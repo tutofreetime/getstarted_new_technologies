@@ -1,0 +1,88 @@
+
+.text {
+  //&-* {
+  //  //margin-bottom: 0.75em;
+  //  font-weight: bold;
+  //}
+  &-h1 {
+    font-size: 1.50rem;
+    @include align(center);
+    @include align(left);
+    @include align(right);
+  }
+
+  &-h2 {
+    font-size: 1.25rem;
+    @include align(center);
+    @include align(left);
+    @include align(right);
+  }
+
+  &-h3 {
+    font-size: 1.10rem;
+    @include align(center);
+    @include align(left);
+    @include align(right);
+  }
+
+  &-h4 {
+    font-size: 1.25rem;
+    @include align(center);
+    @include align(left);
+    @include align(right);
+  }
+
+  &-h5 {
+    font-size: .75rem;
+    @include align(center);
+    @include align(left);
+    @include align(right);
+  }
+
+  &-h6 {
+    font-size: 1rem;
+    @include align(center);
+    @include align(left);
+    @include align(right);
+  }
+
+  &-p {
+    font-size: .9rem;
+    margin-bottom: 1rem;
+  }
+
+  @include media-min2('tablet-up') {
+    //&-* {
+    //  font-weight: bold;
+    //}
+
+    &-h1 {
+      font-size: 2rem;
+    }
+
+    &-h2 {
+      font-size: 1.75rem;
+    }
+
+    &-h3 {
+      font-size: 1.50rem;
+    }
+
+    &-h4 {
+      font-size: 1.25rem;
+    }
+
+    &-h5 {
+      font-size: 1.15rem;
+    }
+
+    &-h6 {
+      font-size: 1rem;
+    }
+
+    &-p {
+      font-size: 1rem;
+    }
+
+  }
+}

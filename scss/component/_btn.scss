@@ -1,0 +1,76 @@
+// https://fonts.google.com/icons?selected=Material+Icons:subdirectory_arrow_left:&icon.platform=web
+.btn {
+  @include btn( $variant: 'primary', $color: $primary-color-theme, $text_color: $white-color, $border_color: $primary-color-theme);
+  @include btn( $variant: 'secondary', $color: $secondary-color-theme, $text_color: $white-color, $border_color: $secondary-color-theme);
+  @include btn( $variant: 'third', $color: $third-color-theme, $text_color: $white-color, $border_color: $third-color-theme);
+  @include btn( $variant: 'fourth', $color: $fourth-color-theme, $text_color: $white-color, $border_color: $fourth-color-theme);
+
+  @include btn( $variant: 'danger', $color: $danger-color, $text_color: $white-color, $border_color: $danger-color);
+  @include btn( $variant: 'green', $color: $success-color, $text_color: $white-color, $border_color: $success-color);
+  @include btn( $variant: 'blue', $color: $primary-color, $text_color: $white-color, $border_color: $primary-color);
+  @include btn( $variant: 'warning', $color: $warning-color, $text_color: $white-color, $border_color: $warning-color);
+  @include btn( $variant: 'info', $color: $info-color, $text_color: $white-color, $border_color: $info-color);
+  @include btn( $variant: 'grey', $color: $grey-color, $text_color: $white-color, $border_color: $grey-color);
+  @include btn( $variant: 'grey1', $color: $grey1-color, $text_color: $white-color, $border_color: $grey1-color);
+  @include btn( $variant: 'grey2', $color: $grey2-color, $text_color: $white-color, $border_color: $grey2-color);
+  @include btn( $variant: 'grey3', $color: $grey3-color, $text_color: $white-color, $border_color: $grey3-color);
+
+  @include btn( $variant: 'white', $color: $white-color, $text_color: $dark-color, $border_color: $grey-color);
+
+  // Button outline
+  @include btn( $variant: 'primary__outline', $color: $white-color, $text_color: $primary-color-theme, $border_color: $primary-color-theme);
+  @include btn( $variant: 'secondary__outline', $color: $white-color, $text_color: $secondary-color-theme, $border_color: $secondary-color-theme);
+  @include btn( $variant: 'third__outline', $color: $white-color, $text_color: $third-color-theme, $border_color: $third-color-theme);
+  @include btn( $variant: 'fourth__outline', $color: $white-color, $text_color: $fourth-color-theme, $border_color: $fourth-color-theme);
+
+  @include btn( $variant: 'danger__outline', $color: $white-color, $text_color: $danger-color, $border_color: $danger-color);
+  @include btn( $variant: 'green__outline', $color: $white-color, $text_color: $success-color, $border_color: $success-color);
+  @include btn( $variant: 'blue__outline', $color: $white-color, $text_color: $primary-color, $border_color: $primary-color);
+  @include btn( $variant: 'warning__outline', $color: $white-color, $text_color: $warning-color, $border_color: $warning-color);
+  @include btn( $variant: 'info__outline', $color: $white-color, $text_color: $info-color, $border_color: $info-color);
+  @include btn( $variant: 'grey__outline', $color: $white-color, $text_color: $grey-color, $border_color: $grey-color);
+  @include btn( $variant: 'grey1__outline', $color: $white-color, $text_color: $grey1-color, $border_color: $grey1-color);
+  @include btn( $variant: 'grey2__outline', $color: $white-color, $text_color: $grey2-color, $border_color: $grey2-color);
+  @include btn( $variant: 'grey3__outline', $color: $white-color, $text_color: $grey3-color, $border_color: $grey3-color);
+}
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 5rem;
+  right: 2rem;
+  opacity: 0;
+  transition: all .2s ease-in-out;
+  background-color: $primary-color-theme;
+  width: 45px;
+  height: 45px;
+  border-radius: .3rem;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  z-index: 1;
+  &:hover {
+    background-color: $white-color;
+    .scroll-to-top-btn {
+      background-color: $white-color;
+
+      span {
+        color: $primary-color-theme;
+      }
+    }
+  }
+  .scroll-to-top-btn {
+    background-color: $primary-color-theme;
+    padding: .3rem;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+    span {
+      color: $white-color;
+    }
+  }
+}
+.show-scrollTop {
+  opacity: 1;
+  transition: all .2s ease-in-out;
+}
+
+

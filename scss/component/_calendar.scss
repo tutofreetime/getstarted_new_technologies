@@ -1,0 +1,10 @@
+.calendar {
+  background-color: $white-color;
+  padding: 1rem;
+  border-radius: $border-radius;
+
+  .fc-toolbar-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+}

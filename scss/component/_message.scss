@@ -1,0 +1,21 @@
+.return__message {
+  position: fixed;
+  top: 5rem;
+  left: 0;
+  right: 0;
+  transition: all 0.1s ease-in-out;
+  z-index: 9999;
+  width: calc(100% - 3rem);
+  max-width: 520px;
+  margin: 0 auto;
+
+  min-height: 60px;
+  border-radius: $border-radius;
+  overflow: hidden;
+
+  @include message($color: $success-color, $variant: 'success');
+  @include message($color: $danger, $variant: danger);
+  @include message($color: $warning-color, $variant: 'warning');
+  @include message($color: $info-color, $variant: 'info');
+  @include message($color: $primary-color, $variant: 'primary');
+}

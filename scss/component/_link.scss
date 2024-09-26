@@ -1,0 +1,14 @@
+.link {
+  @include link($variant: 'primary', $color: $primary-color-theme);
+  @include link($variant: 'secondary', $color: $secondary-color-theme);
+  @include link($variant: 'third', $color: $third-color-theme);
+  @include link($variant: 'fourth', $color: $fourth-color-theme);
+
+  @include link($variant: 'danger', $color: $danger-color);
+  @include link($variant: 'green', $color: $success-color);
+  @include link($variant: 'blue', $color: $primary-color);
+  @include link($variant: 'warning', $color: $warning-color);
+  @include link($variant: 'info', $color: $info-color);
+  @include link($variant: 'grey', $color: $grey-color);
+  @include link($variant: 'grey1', $color: $grey1-color);
+}

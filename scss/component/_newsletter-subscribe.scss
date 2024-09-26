@@ -1,0 +1,68 @@
+.newsletter__subscribe {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 1rem;
+  color: $white-color;
+  padding-top: 2rem;
+  border-radius: $border-radius;
+  &__left {
+    margin-bottom: 1.5rem;
+    .text-h1 {
+      font-size: 1.5rem;
+      margin-bottom: 0;
+    }
+  }
+
+  &__right {
+    margin-bottom: 1.5rem;
+
+    > div {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center;
+      button {
+        padding-top: 1rem ;
+        margin-top: 1rem;
+        margin-left: .5rem;
+      }
+    }
+  }
+
+  @include media-min2('tablet-up') {
+    text-align: center;
+  }
+
+  @include media-min2('desktop-up') {
+    min-height: 250px;
+    display: grid;
+    grid-template-columns: 2fr 5fr;
+    align-items: center;
+    padding: 1rem 4rem;
+
+    &__left {
+      .text-p {
+        display: none;
+      }
+    }
+
+    &__right {
+      width: 100%;
+      > div {
+        display: grid;
+        grid-template-columns: 70% 30%;
+        flex-direction: row;
+        align-items: center;
+        input {
+          width: 100%;
+        }
+        button {
+          margin-top: unset;
+        }
+      }
+    }
+  }
+}

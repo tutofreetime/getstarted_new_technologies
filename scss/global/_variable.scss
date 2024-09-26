@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/*COLORS VALUES*/
+// THEME COLORS
+$primary-color-theme: #4D2DB7;
+$secondary-color-theme: #243455;
+$third-color-theme: #A59EB8;
+$fourth-color-theme: #D9D9D9;
+
+//
+$success-color: #67C23A;
+$warning-color: #E6A23C;
+$danger-color: #F56C6C;
+$info-color: #33B5E5;
+//
+$primary-color: #4285F4;
+:root {
+  --primary-color: #4285F4;
+}
+$secondary-color: #AA66CC;
+$default-color: #2BBBAD;
+//
+$default-color: #909399;
+$dark-color: #303133;
+$dark-light-color: #606266;
+$dark-light2-color: #909399;
+$input-bg-color: #FAFAFA;
+$grey-color: #DCDFE6;
+$grey1-color: #E4E7ED;
+$grey2-color: #EBEEF5;
+$grey3-color: #F2F6FC;
+$white-color: #FFFFFF;
+$dark-white-color: #F4F4F4;
+$navbar-bg-color: rgb(84, 92, 100);
+
+$accent: #F3534A;
+$primary: #3B71CA;
+$secondary: #B23CFD;
+$tertiary: #FFE358;
+$success: #00B74A;
+$warning: #FFA900;
+$danger: #F93154;
+$info: #39C0ED;
+$dark: #262626;
+$black: #323643;
+$gray4: #ECECEC;
+$default: #512DA8;
+$transparent: "transparent";
+$dark_white: #F4F5F7;
+$blue_card: #E6EEFA;
+
+
+/*WIDTHS VALUES*/
+$container-width: 1100px;
+$container-fluid-width: 70vw;
+$container-mobile-width: 100vw;
+$container-tablet-width: 768px;
+$container-desktop-width: 1224px;
+$container-widescreen-width: 1440px;
+
+/*ASIDE*/
+$aside-icones-width:50px;
+$aside-hidden-link-width:251px;
+
+/*ALERTS*/
+
+
+/*NAVBAR*/
+
+$logo-width:70px;
+$logo-height:70px;
+
+/*DROPDOWN*/
+
+
+/*COLLECTIONS*/
+
+$collection-width:200px;
+
+
+//todo : Can be changed
+$max-width:100%;
+
+/*ASIDE PROFILE*/
+
+$aside-profile-width: 300px;
+$aside-profile-bg-height: 120px;
+$aside-profile-bg-color: $grey1-color;
+$social_size: 40px;
+
+$border-radius: .3rem;
+
+roboto-thin {
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+  }
+  
+  .roboto-light {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  .roboto-regular {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .roboto-medium {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  .roboto-bold {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .roboto-black {
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+  }
+  
+  .roboto-thin-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    font-style: italic;
+  }
+  
+  .roboto-light-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+  }
+  
+  .roboto-regular-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  .roboto-medium-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+  }
+  
+  .roboto-bold-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+  }
+  
+  .roboto-black-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    font-style: italic;
+  }
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+input , button , textarea {
+    outline: none;
+    border: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+  }
+  
+  a {
+    text-decoration: none;
+    color: unset;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  li {
+    list-style: none;
+  }
+  
+  img {
+    width: 100%;
+    display: block;
+  }
+  
+  svg {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  
+  .container {
+    max-width: $container-width;
+    height: auto;
+    margin: 0 auto;
+    padding: 0 1rem;
+    &__fluid {
+      max-width: $container-fluid-width;
+      margin: 0 auto;
+    }
+  }
+  
+  .division {
+    width: 100%;
+    height: 1px;
+    background-color: $grey-color;
+    margin: .25rem 0;
+  }
+  
+  .avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    overflow: hidden;
+    cursor: pointer;
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  

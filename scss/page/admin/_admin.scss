@@ -1,0 +1,238 @@
+&.admin-dashboard {
+    min-height: 100%;
+    width: 100%;
+    .admin-dashboard-aside {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: $dark-color;
+        .aside-top {
+
+            color: $white-color;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            &-title {
+                display: block;
+                a {
+                    display: block;
+                    padding: 1rem;
+                    &:last-of-type {
+                        display: none;
+                    }
+                }
+                font-size: 1.8rem;
+                font-weight: 900;
+            }
+            &-item {
+                display: none;
+            }
+
+            &-hamburger {
+                span {
+                    font-size: 2rem;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .aside-bottom {
+            display: none;
+        }
+    }
+
+    .admin-dashboard-content {
+        // to code
+        margin-top: 4rem;
+        min-height: 100vh;
+        border: 1px solid black;
+        padding: 1rem;
+    }
+
+    @include media-min2('tablet-up') {
+        display: grid;
+        grid-template-columns: 7% 93%;
+        .admin-dashboard-aside {
+            position: unset;
+            .aside-top {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                &-title {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    a {
+                        &:first-of-type {
+                            display: none;
+                        }
+
+                        &:last-of-type {
+                            display: block;
+                        }
+                    }
+                }
+                &-item {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    & > span {
+                        display: none;
+                    }
+
+                    nav {
+                        ul {
+                            display: flex;
+                            flex-direction: column;
+                            li {
+                                a {
+                                    display: block;
+                                    padding: 1rem;
+                                    transition: all .2s ease-in-out;
+                                    &:hover {
+                                        background-color: $white-color;
+                                        color: $dark-color;
+                                    }
+                                    span {
+                                        &:last-of-type {
+                                            display: none;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+    
+                &-hamburger {
+                    display: none;
+                }
+            }
+    
+            .aside-bottom {
+                display: unset;
+                p {
+                    display: block;
+                    padding: 1rem;
+                    transition: all .2s ease-in-out;
+                    cursor: pointer;
+                    background-color: $danger-color;
+                    color: $dark-color;
+                    &:hover {
+                        background-color: $dark-color;
+                        color: $danger-color;
+                    }
+                    span {
+                        &:last-of-type {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    
+        .admin-dashboard-content {
+            // to code
+            margin-top: unset;
+        }
+    }
+
+    @include media-min2('desktop-up') {
+        grid-template-columns: 15% 85%;
+
+        .admin-dashboard-aside {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            .aside-top {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                &-title {
+                    width: 100%;
+                    text-align: center;
+                    a {
+                        padding: 1.5rem 0;
+                        width: 100%;
+                        border-bottom: 1px solid $white-color;
+                        &:first-of-type {
+                            display: block;
+                        }
+
+                        &:last-of-type {
+                            display: none;
+                        }
+                    }
+                }
+
+                &-item {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: unset;
+                    justify-content: unset;
+
+                    & > span {
+                        display: block;
+                        text-align: center;
+                        padding: 1rem 0;
+                        color: lighten($color: $dark-light-color, $amount: 30) ;
+                    }
+
+                    nav {
+                        ul {
+                            display: flex;
+                            flex-direction: column;
+                            li {
+                                a {
+                                    display: flex;
+                                    flex-direction: row;
+                                    align-items: center;
+                                    span {
+                                        &:last-of-type {
+                                            display: block;
+                                            margin-left: .5rem;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+    
+                &-hamburger {
+                    display: none;
+                }
+            }
+    
+            .aside-bottom {
+                display: unset;
+                p {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    &:hover {
+                        background-color: $dark-color;
+                        color: $danger-color;
+                    }
+                    span {
+                        &:last-of-type {
+                            display: block;
+                            margin-left: .5rem;
+                        }
+                    }
+                }
+            }
+        }
+
+        .admin-dashboard-content {
+            // to code
+        }
+    }
+}

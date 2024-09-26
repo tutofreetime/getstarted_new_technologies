@@ -1,0 +1,14 @@
+.notification {
+  padding: 1.5rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: $border-radius;
+  width: 100%;
+
+  @include notification($color: $primary-color, $variant: primary);
+  @include notification($color: $secondary-color, $variant: secondary);
+  @include notification($color: $danger-color, $variant: danger);
+  @include notification($color: $warning-color, $variant: warning);
+  @include notification($color: $success-color, $variant: success);
+}

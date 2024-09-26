@@ -1,0 +1,200 @@
+.navbar {
+  background-color: $fourth-color-theme;
+  & > .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: .3rem 1rem;
+    position: relative;
+  }
+
+  &__left {
+    display: none;
+  }
+
+  &__center {
+    &__logo {
+      padding: 0;
+      margin: 0;
+      &__mask {
+        width: 2rem;
+        height: 2rem;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+
+  &__right {
+    display: none;
+  }
+
+  &__hamburger {
+    cursor: pointer;
+  }
+
+  @include media-min2('tablet-down') {
+    padding: 0 2rem;
+    &__left {
+      display: flex;
+      a {
+        color: $secondary-color-theme;
+        transition: all .2s ease-in-out;
+        &:hover {
+          font-weight: 600;
+        }
+      }
+      & > * {
+        padding: .5rem 1rem;
+      }
+    }
+
+    &__center {}
+
+    &__right {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+
+      &__search {
+        .form__group {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+
+          position: relative;
+          span {
+            position: absolute;
+            display: grid;
+            place-items: center;
+            right: 4px;
+            width: 40px;
+            height: 40px;
+            background: $secondary-color-theme;
+            border-radius: 50%;
+            color: $white-color;
+            cursor: pointer;
+          }
+        }
+      }
+
+      &__profile {
+        &__image {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          margin-left: 1rem;
+          position: relative;
+
+          &__mask {
+            width: 2.7rem;
+            height: 2.7rem;
+            border-radius: 50%;
+            overflow: hidden;
+            cursor: pointer;
+            img {
+              width: 100%;
+              height: 100%;
+            }
+          }
+
+          &__dropdown {
+            display: none;
+            position: absolute;
+            top: 2.8rem;
+            right: -4rem;
+            z-index: 1;
+            background-color: $fourth-color-theme;
+            border-radius: 0 0 $border-radius $border-radius;
+            overflow: hidden;
+            &__profile {
+              &__items {
+                display: flex;
+                flex-direction: column;
+                &__item {
+                  display: flex;
+                  flex-direction: row;
+                  align-items: center;
+                  padding: .5rem 1rem;
+                  color: $secondary-color-theme;
+                  font-size: .8rem;
+                  padding-right: 4rem;
+                  transition: all .2s ease-in-out;
+                  cursor: pointer;
+                  &>.material-icons {
+                    margin-right: .2rem;
+                    color: $secondary-color-theme;
+                    transition: all .2s ease-in-out;
+                  }
+
+                  &:hover {
+                    background-color: $secondary-color-theme;
+                    color: $white-color;
+                    .material-icons {
+                      color: $white-color;
+                    }
+                  }
+                }
+              }
+            }
+          }
+
+          &:hover {
+            .navbar__right__profile__image__dropdown {
+              display: flex;
+            }
+          }
+
+          &__status {
+            display: flex;
+            flex-direction: column;
+            margin-left: 0.5rem;
+            & > a, & > span {
+              color: $secondary-color-theme;
+              transition: all .2s ease-in-out;
+              font-weight: bold;
+              &:hover {
+                font-weight: 600;
+              }
+            }
+
+            span {
+              font-size: .8rem;
+              color: $success-color;
+            }
+          }
+
+        }
+
+        &__login {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          margin-left: 1rem;
+          &__icon {
+            width: 2.8rem;
+            height: 2.8rem;
+            display: grid;
+            place-items: center;
+            background-color: $secondary-color-theme;
+            border-radius: 50%;
+            color: $white-color;
+          }
+          &__text {
+            margin-left: 0.3rem;
+            text-transform: capitalize;
+            color: $secondary-color-theme;
+          }
+        }
+      }
+    }
+
+    &__hamburger {
+      display: none;
+    }
+  }
+}

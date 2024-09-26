@@ -1,0 +1,126 @@
+.form {
+
+  &__group {
+    width: 100%;
+    display: inline-block;
+
+    &__checkbox {
+      width: unset;
+      display: flex;
+      align-items: start;
+      justify-content: start;
+      margin: 1rem 0;
+      input {
+        width: unset;
+        margin-top: 0;
+        margin-right: .2rem;
+      }
+
+      label {
+        margin-top: -.1rem;
+        margin-left: .5rem;
+      }
+    }
+
+    &__radio {
+      display: flex;
+      align-items: center;
+      & > input {
+        margin-top: 0;
+        margin-right: .3rem;
+      }
+    }
+
+    &.rounded {
+      position: relative;
+      input {
+        border-radius: 25rem;
+        padding-left: 1rem;
+        padding-right: 3rem;
+        border: 1px solid;
+      }
+
+      .material-symbols-sharp {
+        position: absolute;
+        top: 50%;
+        right: .3rem;
+        transform: translateY(-50%);
+        color: $grey-color;
+        cursor: pointer;
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 50%;
+        background-color: $dark-color;
+        display: grid;
+        place-items: center;
+      }
+    }
+  }
+
+  &__select {
+    margin-top: .5rem;
+    &__content {
+      color: darken($grey-color, 40%);
+      font-size: 0.7rem;
+      margin-top: 0.2rem;
+    }
+  }
+
+  &__input, &__textarea {
+    display: inline-block;
+    padding: .9rem .8rem;
+    width: 100%;
+    margin-top: .1rem;
+    border: 0.5px solid $grey-color;
+    border-radius: $border-radius;
+    background: $input-bg-color;
+    &:focus {
+      outline: none;
+    }
+
+    &__message {
+      color: $danger-color;
+      font-size: 0.7rem;
+      margin-top: 0.1rem;
+    }
+
+    &__instruction {
+      color: darken($grey-color, 20%);
+      font-size: 0.7rem;
+      margin-top: 0.1rem;
+    }
+  }
+
+  &__contact_host {
+    &__form {
+      padding: 2rem 1rem;
+      .form__group {
+        margin: .5rem 0;
+      }
+      &__btn{
+        margin-top: 1rem;
+        text-align: right;
+      }
+    }
+  }
+
+  &__login, &__register, &__forgot, &__reset, &__contact, &__member__profile {
+    padding: 2rem 1rem;
+    border-radius: $border-radius;
+    &__title {
+      text-align: center;
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    &__form {
+      .form__group {
+        margin-bottom: 1.3rem;
+      }
+
+      &__btn {
+        text-align: right;
+      }
+    }
+  }
+}
